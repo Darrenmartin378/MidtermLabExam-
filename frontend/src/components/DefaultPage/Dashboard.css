@@ -1,0 +1,90 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eaf5ea; 
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #eaf5ea; 
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.dashboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+    background-color: #eaf5ea; 
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+.dashboard-container th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #c8e6c9;
+    font-size: 16px;
+    margin: 0;
+}
+
+.dashboard-container th {
+    background-color: #388e3c; 
+    color: white;
+}
+
+.dashboard-container tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+.dashboard-container tr:hover {
+    background-color: #dcedc8;
+}
+
+/* Prevent text overflow in table cells */
+.dashboard-container td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .dashboard-container table {
+        font-size: 14px;
+    }
+
+    .dashboard-container th, td {
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
+
+/* Horizontal scrolling for small screens */
+@media screen and (max-width: 480px) {
+    .dashboard-container table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+}
